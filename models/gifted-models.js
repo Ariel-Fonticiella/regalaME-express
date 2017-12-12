@@ -15,7 +15,7 @@ const giftedSchema = new Schema(
         { type: String }
       ],
       priceRange: {
-        type: Number,
+        type: String,
         required: [true, "Need price range for gift."]
       },
       giftLink: {
