@@ -28,6 +28,7 @@ router.get("/gifted", (req, res, next) => {
 router.post("/gifted", (req, res, next) => {
     const theGifted = new Gifted({
         name: req.body.name,
+        birthday: req.body.birthday,
         relationship: req.body.relationship,
         interest: req.body.interest,
         priceRange: req.body.priceRange,
