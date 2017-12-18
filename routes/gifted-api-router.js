@@ -123,6 +123,7 @@ router.put("/gifted/:id", (req, res, next) => {
 
           giftedFromDb.set({
             name: req.body.name,
+            birthday: req.body.birthday,
             relationship: req.body.relationship,
             interest: req.body.interest,
             priceRange: req.body.priceRange,
