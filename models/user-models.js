@@ -18,6 +18,7 @@ const userSchema = new Schema(
           type: String,
           required: [true, 'Encrypted password is empty']
       }
+
   },
 
   {

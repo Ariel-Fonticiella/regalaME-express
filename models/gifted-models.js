@@ -21,6 +21,12 @@ const giftedSchema = new Schema(
       giftLink: {
         type: String,
         required: [true, "Need link to purchase gift."]
+      },
+      birthday: {
+        type: String
+      },
+      owner: {
+        type: Schema.Types.ObjectId,
       }
   },
 

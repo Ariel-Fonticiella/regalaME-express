@@ -31,7 +31,8 @@ router.post("/gifted", (req, res, next) => {
         relationship: req.body.relationship,
         interest: req.body.interest,
         priceRange: req.body.priceRange,
-        giftLink: req.body.giftLink
+        giftLink: req.body.giftLink,
+        // owner: req.user._id
     });
 
     theGifted.save()
@@ -149,6 +150,26 @@ router.put("/gifted/:id", (req, res, next) => {
           }
       });
 }); // PUT /gifted/:id
+
+router.get("/usergifted", (req, res, next) => {
+    Gifted
+      .find({ owner: req.user._id })
+      .limit(25)
+      .exec()
+      .then((giftedResults) => {
+          // respond with the QUERY RESULTS in the JSON format
+          res.status(200).json(giftedResults);
+      })
+      .catch((err) => {
+          console.log("GET /usergifted ERROR!");
+          console.log(err);
+
+          // respond with an ERROR MESSAGE in the JSON format
+          res.status(500).json({ error: "Gifted list database error" });
+      });
+}); // GET /usergifted
+
+
 
 
 module.exports = router;
