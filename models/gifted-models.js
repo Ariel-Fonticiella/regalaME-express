@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 
 const giftedSchema = new Schema(
   {
+      start: {
+        type: Date
+      },
       name: {
         type: String,
         required: [true, "Name of person you are gifting is required."]

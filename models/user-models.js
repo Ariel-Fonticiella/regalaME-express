@@ -10,6 +10,14 @@ const userSchema = new Schema(
           type: String,
           required: [true, 'Please tell us your name']
       },
+      avatar: {
+        type: String,
+        default: ""
+      },
+      email: {
+        type: String,
+        match:[/.+@.+/, "Emails need an @ sign."]
+      },
       username: {
           type: String,
           required: [true, 'Username is required']

@@ -32,7 +32,6 @@ router.post("/gifted", (req, res, next) => {
         interest: req.body.interest,
         priceRange: req.body.priceRange,
         giftLink: req.body.giftLink,
-        // owner: req.user._id
     });
 
     theGifted.save()
