@@ -1,0 +1,30 @@
+
+<div class="wrapper">
+    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../assets/img/friends.jpg');">
+        <div class="filter"></div>
+    </div>
+
+      <div class="card-block">
+        <h4 class="title"> <b>Details</b></h4>
+        <p class="card-text"><b>{{ giftedInfo.name }}</b></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <p> Birthday: {{ giftedInfo.birthday }}</p>
+            <p> Relationship: {{ giftedInfo.relationship }} <p>
+            <p> Interest: {{ giftedInfo.interest }} </p>
+        </li>
+      </ul>
+      <div class="card-block">
+        <h3 class="title"> Gift Idea </h3>
+          <!-- <ul class="list-group list-group-flush"> -->
+            <!-- <li class="list-group-item"> -->
+                <p> Gift Link: {{ giftedInfo.giftLink }} </p>
+            <!-- </li> -->
+          <!-- </ul> -->
+      </div>
+</div>
+
+<button *ngIf="giftedInfo._id" (click)="startDeleteAjax()">
+  Delete This Person
+</button>
