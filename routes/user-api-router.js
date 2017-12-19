@@ -127,5 +127,4 @@ router.get('/checklogin', (req, res, next) => {
     }
 }); // GET /checklogin
 
-
 module.exports = router;
